@@ -2,6 +2,7 @@ import httpx
 from bs4 import BeautifulSoup
 import asyncio
 from datetime import datetime
+import re
 
 # Define ANSI color codes
 COLOR_GREEN = '\033[92m'  # Green color
@@ -25,7 +26,8 @@ async def fetch_html(url):
 # Function to search for text in the HTML content
 def search_text(html, search_term):
     soup = BeautifulSoup(html, 'html.parser')
-    search_results = soup.body(text=lambda t: search_term.lower() in t.lower())
+    search_pattern = re.compile(re.escape(search_term), re.IGNORECASE)
+    search_results = soup.body(text=lambda t: search_pattern.search(t))
     return search_results
 
 # Function to get the current timestamp
