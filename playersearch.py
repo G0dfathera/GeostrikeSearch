@@ -10,7 +10,7 @@ COLOR_RESET = '\033[0m'   # Reset to default color
 
 # List of URLs to capture
 urls = [
-    'https://cs2browser.com/gameserver/108840/geostrike-community-cs2-retake-geostrike-ge/',
+    'https://cs2browser.com/gameserver/21545/geostrike-community-cs2-public-geostrike-ge/',
     'https://cs2browser.com/gameserver/82346/geostrike-community-cs2-automix-geostrike-ge/',
     'https://cs2browser.com/gameserver/108840/geostrike-community-cs2-retake-geostrike-ge/',
     'https://cs2browser.com/gameserver/22374/geostrike-community-cs2-aim-geostrike-ge/'
